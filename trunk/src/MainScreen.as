@@ -13,8 +13,8 @@ package
 		public function MainScreen() 
 		{
 			bg = new BGimg();
-			bg.height = 600;
-			bg.width = 800;			
+			bg.height = 670;
+			bg.width = 1000;			
 			this.addChild(bg);
 		}
 		
