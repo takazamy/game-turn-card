@@ -1,5 +1,6 @@
 package 
 {
+	import flash.display.MovieClip;
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.utils.setTimeout;
@@ -13,6 +14,7 @@ package
 	{
 		private var mainScreen:MainScreen;
 		private var startBtn:Start_Btn;
+		private var trucXanhScreen:TrucXanh_mc;
 		
 		public function Main():void 
 		{
@@ -28,8 +30,8 @@ package
 			startBtn = new Start_Btn();
 			
 			this.addChild(mainScreen);
-			startBtn.x = 800 / 2 - startBtn.width / 2;
-			startBtn.y = 400;
+			startBtn.x = 500 - startBtn.width / 2;
+			startBtn.y = 500;
 			this.addChild(startBtn)
 			
 		}
