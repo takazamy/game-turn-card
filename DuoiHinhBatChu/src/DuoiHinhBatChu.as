@@ -22,13 +22,24 @@ package
 		private var answer:String = "";
 		private var goiY:String = "";
 		private var realAnswer:String = "";
-		
+		private var textNhap:textNhap_mc;
+		private var textGoiY:textGioiY_mc;
 		public function DuoiHinhBatChu():void
 		{
 			bg = new BG1();
+			bg.alpha = 0.5;
 			this.addChild(bg);
 			//bg.textNhap.visible = false;
 			//bg.textGoiY.visible = false;
+			textNhap = new textNhap_mc();
+			textNhap.x = 46;
+			textNhap.y = 143.5;
+			this.addChild(textNhap);
+			
+			textGoiY = new textGioiY_mc();
+			textGoiY.x = 127;
+			textGoiY.y = 286.4;
+			this.addChild(textGoiY);
 			
 			ketquabtn = new Ket_Qua_btn()
 			ketquabtn.x = 870//500 - ketquabtn.width/2;
@@ -60,14 +71,14 @@ package
 		
 		private function traloibtnCLick(e:MouseEvent):void 
 		{
-			if (bg.textNhap.txt.text == answer)
+			if (textNhap.txt.text == answer)
 			{
 				if (trueAnswer == null) 
 				{
 					trueAnswer = new NotifyWin();
 					this.addChild(trueAnswer);
 					trueAnswer.x = 500 - trueAnswer.width / 2;
-					trueAnswer.y = 250;
+					trueAnswer.y = 450;
 				}
 				trueAnswer.gotoAndStop(1);
 				trueAnswer.result_txt.text =  realAnswer;
@@ -86,7 +97,7 @@ package
 		
 		private function goiYBtnCLick(e:MouseEvent):void 
 		{
-			bg.textGoiY.txt.text = goiY;
+			textGoiY.txt.text = goiY;
 		}
 		
 		private function nextBtnCLick(e:MouseEvent):void 
@@ -104,7 +115,7 @@ package
 				trueAnswer = new NotifyWin();
 				this.addChild(trueAnswer);
 				trueAnswer.x = 500 - trueAnswer.width / 2;
-				trueAnswer.y = 250;
+				trueAnswer.y = 450;
 			}
 			trueAnswer.gotoAndStop(2);
 			trueAnswer.result_txt.text =  realAnswer;
@@ -133,8 +144,8 @@ package
 			
 			this.answer = obj._answer;
 			this.goiY = obj._goiY;
-			bg.textNhap.txt.text = "";
-			bg.textGoiY.txt.text = "";
+			textNhap.txt.text = "";
+			textGoiY.txt.text = "";
 			
 			this.realAnswer = obj._realAnswer;
 			this.nextBtn.visible = false;
@@ -147,13 +158,16 @@ package
 			}
 			
 			var source:MovieClip = new obj._class as MovieClip;
-			source.width = 300;
-			source.height = 300;
+			source.width = 600;
+			source.height = 450;
+			//trace("con.width:"+container.width);
+			//container.width = source.width;
+			//container.height = source.height;
 			container.addChild(source);
-			
+			//trace("con.width:"+container.width);
 			container.x = 500 - container.width / 2;
-			container.y = 100;
-			container.addChildAt(new border(), 0);
+			container.y = 10;
+			//container.addChildAt(new border(), 0);
 			
 		}
 		
@@ -165,7 +179,7 @@ package
 				error = new NotifyRetry();
 				this.addChild(error);
 				error.x = 500 - error.width / 2;
-				error.y = 300;				
+				error.y = 450;				
 				this.addChild(error);
 			}
 			error.alpha = 1;
