@@ -16,7 +16,7 @@
     </define>
     <define append="true">
       <name>CONFIG::timeStamp</name>
-      <value>'15/06/2013'</value>
+      <value>'16/06/2013'</value>
     </define>
     <define append="true">
       <name>CONFIG::air</name>
@@ -32,16 +32,16 @@
     </define>
     <verbose-stacktraces>true</verbose-stacktraces>
     <source-path append="true">
-      <path-element>E:\MoneyProject\TrucXanh\src</path-element>
+      <path-element>E:\MoneyProject\TrucXanh\TrucXanh\src</path-element>
       <path-element>C:\Program Files (x86)\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
     <library-path append="true">
-      <path-element>E:\MoneyProject\TrucXanh\lib\Resource.swc</path-element>
-      <path-element>E:\MoneyProject\TrucXanh\lib\greensock.swc</path-element>
+      <path-element>E:\MoneyProject\TrucXanh\TrucXanh\lib\Resource.swc</path-element>
+      <path-element>E:\MoneyProject\TrucXanh\TrucXanh\lib\greensock.swc</path-element>
     </library-path>
   </compiler>
   <file-specs>
-    <path-element>E:\MoneyProject\TrucXanh\src\Main.as</path-element>
+    <path-element>E:\MoneyProject\TrucXanh\TrucXanh\src\Main.as</path-element>
   </file-specs>
   <default-background-color>#FFFFFF</default-background-color>
   <default-frame-rate>30</default-frame-rate>
