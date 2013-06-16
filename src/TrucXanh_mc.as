@@ -98,13 +98,19 @@ package
 		public function loadResourceMainQuesttion():void
 		{
 			mainQuestion = new Question1 as MovieClip;
+			mainQuestion.width = mainQuestion.height = 437;
 			this.addChildAt(mainQuestion, 0);
 			mainAnswer = "coca";
 			
 			doanChu_btn = new Doan_chu_btn();
 			this.addChild(doanChu_btn);
-			doanChu_btn.x = 560;
-			doanChu_btn.y = 400;
+			doanChu_btn.x = 450;
+			doanChu_btn.y = 420;
+			
+			var bg:BG2 = new BG2();
+			bg.x = -229;
+			bg.y = 38;
+			this.addChildAt(bg, 0);
 			doanChu_btn.addEventListener(MouseEvent.CLICK,on_doanChu_btnClick)
 		}
 		

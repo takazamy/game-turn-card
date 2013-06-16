@@ -278,7 +278,7 @@ package
 			retry.height = 40;
 			retry.buttonMode = true;
 			retry.x = 500 - retry.width / 2
-			retry.y = 620;
+			retry.y = 540;
 			this.addChild(retry);
 			retry.addEventListener(MouseEvent.CLICK, onRetry);
 		}

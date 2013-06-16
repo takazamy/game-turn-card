@@ -18,18 +18,21 @@ package
 		public function NhapChu_mc(ans:String) 
 		{
 			this.ans = ans;
-			
+			this.addChild(new BG3);
 			textNhap = new TextField();
 			textNhap.border = true;
-			textNhap.width = 980;
-			textNhap.height = 300;
-			textNhap.x = 10;
-			textNhap.y = 10;
+			textNhap.width = 600;
+			textNhap.height = 200;
+			textNhap.x = 164;
+			textNhap.y = 100;
 			textNhap.type = "input";
+			textNhap.background = true;
+			textNhap.backgroundColor = 0xeeeeee
+			textNhap.border = false;
 			//textNhap.borde = 0xffffff;
 			
 			var textFormat:TextFormat = new TextFormat();
-			textFormat.size = 100;
+			textFormat.size = 70;
 			textNhap.setTextFormat(textFormat);
 			textNhap.defaultTextFormat = textFormat;
 			textNhap.wordWrap = true;
@@ -38,7 +41,7 @@ package
 			
 			ketquabtn = new Ket_Qua_btn()
 			ketquabtn.x = 500 - ketquabtn.width/2;
-			ketquabtn.y = 530;
+			ketquabtn.y = 470;
 			ketquabtn.addEventListener(MouseEvent.CLICK, ketquabtnCLick)
 			this.addChild(ketquabtn);
 		}
