@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<Question id = "1" Text ="Tại sao gọi là Zacs Lạnh?" phongthuy="0">
+		<A isTrue = "0" Text="Do có lớp mạ hợp kim nhôm-kẽm" />
+		<B isTrue = "0" Text="Duy trì bề mặt sáng lâu dài" />
+		<C isTrue = "0" Text="Phản xạ nhiệt tốt" />
+		<D isTrue = "1" Text="Tất cả các câu trên đều đúng" />		
+	</Question>
+	
+	<Question id = "2" Text ="Độ mạ nhôm kẽm của tôn Zacs" phongthuy="0">
+		<A isTrue = "0" Text="50 g/m2" />
+		<B isTrue = "0" Text="70 g/m2" />
+		<C isTrue = "1" Text="100 g/m2" />
+		<D isTrue = "0" Text="Tất cả các câu trên đều đúng" />		
+	</Question>
+	
+	<Question id = "4" Text ="Yếu tố nào quyết định chất lượng của tôn?" phongthuy="0">
+		<A isTrue = "0" Text="Loại lớp mạ và độ dày lớp mạ" />
+		<B isTrue = "0" Text="Lớp xử lý thụ động" />
+		<C isTrue = "0" Text="Công nghệ sản xuất" />
+		<D isTrue = "1" Text="Tất cả các câu trên đều đúng" />		
+	</Question>
+	<Question id = "5" Text ="Cách bảo vệ thép:" phongthuy="0">
+		<A isTrue = "0" Text="Phương pháp Sử dụng lớp sơn che chắn" />
+		<B isTrue = "0" Text="Phương pháp Sử dụng kim loại Kẽm che chắn bảo vệ " />
+		<C isTrue = "0" Text="Phương pháp sử dụng lớp che chắn Nhôm kết hợp Kẽm bảo vệ mép cắt" />
+		<D isTrue = "1" Text="Cả A và B, C đều đúng" />		
+	</Question>
+	<Question id = "6" Text ="Lớp mạ Hợp Kim Nhôm Kẽm là cách bảo vệ thép nào?" phongthuy="0">
+		<A isTrue = "0" Text="Phương pháp Sử dụng lớp che chắn" />
+		<B isTrue = "0" Text="Phương pháp Sử dụng kim loại Kẽm che chắn bảo vệ" />
+		<C isTrue = "1" Text="Phương pháp sử dụng lớp che chắn Nhôm kết hợp Kẽm bảo vệ mép cắt" />
+		<D isTrue = "0" Text="Cả A và B, C đều đúng" />		
+	</Question>
+	
+	<Question id = "7" Text ="Mạt sắt là gì:" phongthuy="0">
+		<A isTrue = "1" Text="Các vụn sắt từ quá trình khoan, cắt, mài.." />
+		<B isTrue = "0" Text="Gỉ sét của tấm lợp" />
+		<C isTrue = "0" Text="Cả A và B đều đúng" />
+		<D isTrue = "0" Text="Cả A và B đều sai" />		
+	</Question>
+	
+	<Question id = "8" Text ="Sản phẩm mới ra mắt của công ty Bluescope Steel có tên là gì?" phongthuy="1">
+		<A isTrue = "0" Text="Sắc Việt" />
+		<B isTrue = "0" Text="Zacs Màu Phong Thuỷ “Phát An Phúc Trường Sinh”" />
+		<C isTrue = "0" Text="B đúng, A sai" />
+		<D isTrue = "1" Text="Cả A & B đều đúng" />		
+	</Question>	
+	
+	<Question id = "9" Text ="Tôn lạnh màu Sắc Việt là sản phẩm" phongthuy="2">
+		<A isTrue = "0" Text="Có độ mạ AZ100" />
+		<B isTrue = "0" Text="Có 5 màu" />
+		<C isTrue = "1" Text="Đúng chất lượng, đúng trọng lượng" />
+		<D isTrue = "0" Text="Cả 3 câu đều sai" />		
+	</Question>
+	
+	<Question id = "10" Text ="Lớp sơn mặt dưới của sản phẩm Sắc Việt là màu gì?" phongthuy="2">
+		<A isTrue = "0" Text="Màu đen" />
+		<B isTrue = "0" Text="Màu xanh đen" />
+		<C isTrue = "1" Text="Màu xám trắng " />
+		<D isTrue = "0" Text="Màu nâu" />		
+	</Question>	
+	
+	<Question id = "11" Text ="Sắc Việt K40 nặng mấy kg?" phongthuy="2">
+		<A isTrue = "1" Text="4 kg" />
+		<B isTrue = "0" Text="3kg" />
+		<C isTrue = "0" Text="2kg" />
+		<D isTrue = "0" Text="4,5kg" />		
+	</Question>
+	
+	<Question id = "12" Text ="Nguyên nhân gây ra hiện tượng rỉ sét chấm nhỏ sau vài tháng lợp tôn, dù là tôn chất lượng cao:" phongthuy="0">
+		<A isTrue = "0" Text="Mạt sắt khi khoan, mài, bắn vít... để lại không được vệ sinh" />
+		<B isTrue = "0" Text="Mạt sắt nhiệt độ cao sinh ra khi cắt tôn không đúng cách" />
+		<C isTrue = "0" Text="Mạt sắt hình thành do điều kiện tự nhiên" />
+		<D isTrue = "1" Text="Cả A & B đều đúng" />		
+	</Question>
+	
+	<Question id = "13" Text ="Yếu tố nhận dạng tôn chất lượng trên thị trường?" phongthuy="0">
+		<A isTrue = "0" Text="Loại lớp mạ (nhôm kẽm hay kẽm)" />
+		<B isTrue = "0" Text="Khối lượng lớp mạ" />
+		<C isTrue = "0" Text="Nhãn hiệu trên bề mặt tôn" />
+		<D isTrue = "0" Text="Bảo hành" />	
+		<E isTrue = "1" Text="Tất cả các câu trên đều đúng" />
+	</Question>
+	
+	<Question id = "14" Text ="Bộ sản phầm Zacs Màu Phong Thuỷ “Phát An Phúc Trường Sinh” có mấy màu?" phongthuy="1">
+		<A isTrue = "0" Text="4 màu" />
+		<B isTrue = "1" Text="5 màu" />
+		<C isTrue = "0" Text="3 màu" />
+		<D isTrue = "0" Text="6 màu" />		
+		<E isTrue = "0" Text="7 màu" />
+	</Question>
+	
+	<Question id = "15" Text ="Sản phẩm Zacs màu phong thuỷ “Thổ Bình An” là màu gì" phongthuy="1">
+		<A isTrue = "1" Text="Màu Nâu" />
+		<B isTrue = "0" Text="Màu Xanh Lá" />
+		<C isTrue = "0" Text="Cả A & B đều sai" />
+		<D isTrue = "0" Text="Cả A & B đều đúng" />		
+	</Question>
+	
+	<Question id = "16" Text ="Sản phẩm Zacs Màu Phong Thuỷ “Hoả Phát Đạt” là màu gì?" phongthuy="1">
+		<A isTrue = "0" Text="Màu Xanh Dương" />
+		<B isTrue = "1" Text="Màu Đỏ" />
+		<C isTrue = "0" Text="Màu Xanh Lá" />
+		<D isTrue = "0" Text="Màu Nâu" />		
+	</Question>
+	
+	<Question id = "17" Text ="Sản phẩm Zacs màu phong thuỷ “Kim Phúc Lộc” là màu gì?" phongthuy="1">
+		<A isTrue = "1" Text="Màu xám" />
+		<B isTrue = "0" Text="Màu vàng" />
+		<C isTrue = "0" Text="Cả A và B đều đúng" />
+		<D isTrue = "0" Text="Cả A và B đều sai" />		
+	</Question>
+	
+	<Question id = "18" Text ="Sản phẩm Zacs màu phong thuỷ “Mộc Khởi Sinh” là màu gì?" phongthuy="1">
+		<A isTrue = "0" Text="Màu xanh dương" />
+		<B isTrue = "0" Text="Màu xanh đen" />
+		<C isTrue = "1" Text="Cả A & B đều sai" />
+		<D isTrue = "0" Text="B đúng, A sai" />
+		<E isTrue = "0" Text="A đúng, B sai" />
+	</Question>
+	
+	<Question id = "19" Text ="Sản phẩm Zacs màu phong thuỷ được bảo hành mấy năm" phongthuy="1">
+		<A isTrue = "0" Text="3 năm" />
+		<B isTrue = "0" Text="5 năm" />
+		<C isTrue = "1" Text="10 năm" />
+		<D isTrue = "0" Text="15 năm" />		
+		<E isTrue = "0" Text="20 năm" />
+	</Question>
+	
+	<Question id = "20" Text ="Sản phẩm Zacs Màu Phong Thuỷ là tôn gì?" phongthuy="1">
+		<A isTrue = "1" Text="Tôn mạ màu trên nền Zacs Lạnh 100" />
+		<B isTrue = "0" Text="Tôn kẽm mạ màu" />
+		<C isTrue = "0" Text="Cả A & B đều sai " />
+		<D isTrue = "0" Text="A sai, B đúng" />		
+	</Question>
+	
+	<Question id = "21" Text ="Kích thước chiều rộng thông dụng của sản phẩm Zacs màu phong thuỷ là bao nhiêu?" phongthuy="1">
+		<A isTrue = "0" Text="1000 mm" />
+		<B isTrue = "1" Text="1200 mm" />
+		<C isTrue = "0" Text="1500 mm" />
+		<D isTrue = "0" Text="500 mm" />	
+		<E isTrue = "0" Text="1800 mm" />
+	</Question>
+	
+	<Question id = "22" Text ="sản phẩm Zacs Màu Phong Thuỷ được giới thiệu ra mắt thời gian nào?" phongthuy="1">
+		<A isTrue = "0" Text="2010" />
+		<B isTrue = "0" Text="2011" />
+		<C isTrue = "1" Text="2012" />
+		<D isTrue = "0" Text="2013" />	
+		<E isTrue = "0" Text="Cả A, B, C, D đều sai" />
+	</Question>	
+	
+	<Question id = "24" Text ="Bộ sản phẩm Zacs Màu Phong Thuỷ của công ty nào?" phongthuy="1">
+		<A isTrue = "1" Text="Bluescope Steel" />
+		<B isTrue = "0" Text="Bluescope Lysaghtp" />
+		<C isTrue = "0" Text="Cả A & B đều đúng" />
+		<D isTrue = "0" Text="A sai, B đúng" />			
+	</Question>	
+	
+	<Question id = "25" Text ="Logo sản phẩm Zacs Màu Phong Thuỷ có mấy màu?" phongthuy="1">
+		<A isTrue = "0" Text="5 màu" />
+		<B isTrue = "0" Text="2 màu" />
+		<C isTrue = "1" Text="3 màu" />
+		<D isTrue = "0" Text="4 màu" />	
+		<E isTrue = "0" Text="Cả A, B, C, D đều sai" />
+	</Question>
+</data>
