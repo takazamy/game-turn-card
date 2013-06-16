@@ -32,16 +32,16 @@
     </define>
     <verbose-stacktraces>true</verbose-stacktraces>
     <source-path append="true">
-      <path-element>E:\MoneyProject\TrucXanh-DuoiHinhBatChu\TrucXanh\src</path-element>
+      <path-element>E:\MoneyProject\TrucXanh-DuoiHinhBatChu\DuoiHinhBatChu\src</path-element>
       <path-element>C:\Program Files (x86)\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
     <library-path append="true">
-      <path-element>E:\MoneyProject\TrucXanh-DuoiHinhBatChu\TrucXanh\lib\Resource.swc</path-element>
-      <path-element>E:\MoneyProject\TrucXanh-DuoiHinhBatChu\TrucXanh\lib\greensock.swc</path-element>
+      <path-element>E:\MoneyProject\TrucXanh-DuoiHinhBatChu\DuoiHinhBatChu\lib\Resource.swc</path-element>
+      <path-element>E:\MoneyProject\TrucXanh-DuoiHinhBatChu\DuoiHinhBatChu\lib\greensock.swc</path-element>
     </library-path>
   </compiler>
   <file-specs>
-    <path-element>E:\MoneyProject\TrucXanh-DuoiHinhBatChu\TrucXanh\src\Main.as</path-element>
+    <path-element>E:\MoneyProject\TrucXanh-DuoiHinhBatChu\DuoiHinhBatChu\src\Main.as</path-element>
   </file-specs>
   <default-background-color>#FFFFFF</default-background-color>
   <default-frame-rate>30</default-frame-rate>
