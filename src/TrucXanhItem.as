@@ -105,7 +105,7 @@ package
 		
 		public function disapear():void
 		{
-			setTimeout(disapear2,1000);
+			setTimeout(disapear2,0.3);
 		}
 		
 		private function disapear2():void

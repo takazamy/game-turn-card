@@ -81,10 +81,10 @@ package
 				item.disapear();
 				selectedItem = null;
 				numAnswerComplete += 2;
-				if (numAnswerComplete == 16) 
-				{
-					on_doanChu_btnClick(null);
-				}
+				//if (numAnswerComplete == 16) 
+				//{
+					//on_doanChu_btnClick(null);
+				//}
 			} else  // chon sai
 			{
 				selectedItem.CoverCard();
