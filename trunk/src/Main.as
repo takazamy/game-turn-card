@@ -123,13 +123,13 @@ package
 		private function next_btn_click(e:MouseEvent):void 
 		{
 			this.questionGame.visible = false;
-			if (this.trucXanhScreen.numAnswerComplete < 16) 
+			//if (this.trucXanhScreen.numAnswerComplete < 16) 
 			{				
 				this.trucXanhScreen.visible = true;
 			}
-			else
+			//else
 			{
-				ShowDoanChu();
+				//ShowDoanChu();
 			}
 		}
 		
@@ -301,13 +301,13 @@ package
 		
 		public function ContinueGame():void
 		{			
-			if (trucXanhScreen.numAnswerComplete < 16) 
-			{				
+			//if (trucXanhScreen.numAnswerComplete < 16) 
+			//{				
 				trucXanhScreen.visible = true;
-				nhapChu.visible = false;
-				nhapChu = null;
-			}
-			else nhapChu.ketquabtn.visible = true;
+				nhapChu.visible = false;				
+				nhapChu.ketquabtn.visible = true;
+			//}
+			//else 
 		}
 	}
 	
