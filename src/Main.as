@@ -272,6 +272,31 @@ package
 			this.addChild(notificationEndgame);
 			notificationEndgame.x = 500 - notificationEndgame.width / 2;
 			notificationEndgame.y = 350;
+			
+			var retry:RetryGame_btn = new RetryGame_btn();
+			retry.width = 40;
+			retry.height = 40;
+			retry.buttonMode = true;
+			retry.x = 500 - retry.width / 2
+			retry.y = 620;
+			this.addChild(retry);
+			retry.addEventListener(MouseEvent.CLICK, onRetry);
+		}
+		
+		private function onRetry(e:MouseEvent):void 
+		{
+			while (numChildren > 0 )
+			{
+				this.removeChildAt(0);
+			}
+			mainScreen = null;
+			trucXanhScreen = null;
+			startBtn = null;
+			questionGame = null;
+			Loader = null;
+			nhapChu = null;
+			notificationEndgame = null;
+			init();
 		}
 		
 		public function ContinueGame():void
@@ -282,6 +307,7 @@ package
 				nhapChu.visible = false;
 				nhapChu = null;
 			}
+			else nhapChu.ketquabtn.visible = true;
 		}
 	}
 	
