@@ -48,6 +48,7 @@ package
 				this.addChild(duoiHinhBatChuScreen);
 				LoaderNextQuesttion();
 				//duoiHinhBatChuScreen.loadResourceMainQuesttion();
+				EndGame()
 			}
 			
 			startBtn.visible = false;
@@ -94,6 +95,29 @@ package
 		public final function LoaderNextQuesttion():void
 		{
 			duoiHinhBatChuScreen.LoadQuestion(resourceClass.shift());
+		}
+		
+		public final function EndGame():void
+		{
+			var retry:RetryGame_btn = new RetryGame_btn();
+			retry.width = 40;
+			retry.height = 40;
+			retry.buttonMode = true;
+			retry.x = 30
+			retry.y = 620;
+			this.addChild(retry);
+			retry.addEventListener(MouseEvent.CLICK, onRetry);
+		}
+		
+		private function onRetry(e:MouseEvent):void 
+		{
+			while (numChildren > 0 )
+				this.removeChildAt(0);
+			mainScreen = null;
+			duoiHinhBatChuScreen = null;
+			resourceClass = null;
+			startBtn = null;
+			init();
 		}
 	}
 	

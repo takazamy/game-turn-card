@@ -14,6 +14,8 @@ package
 		public var ketquabtn:Ket_Qua_btn;
 		public var nextBtn:Next_btn;
 		public var goiYBtn:Goi_y_btn;
+		public var traLoi:Tra_loi;
+		
 		private var container:MovieClip;
 		
 		private var bg:BG1;
@@ -30,8 +32,14 @@ package
 			
 			ketquabtn = new Ket_Qua_btn()
 			ketquabtn.x = 870//500 - ketquabtn.width/2;
-			ketquabtn.y = 470;
+			ketquabtn.y = 470 + 30;
 			ketquabtn.addEventListener(MouseEvent.CLICK, ketquabtnCLick)
+			
+			traLoi = new Tra_loi();
+			traLoi.x = 870//500 - ketquabtn.width/2;
+			traLoi.y = 420 + 30;
+			traLoi.addEventListener(MouseEvent.CLICK, traloibtnCLick)
+			this.addChild(traLoi);
 			
 			nextBtn = new Next_btn();
 			nextBtn.x = 870;
@@ -50,20 +58,7 @@ package
 			this.addChild(container);
 		}
 		
-		private function goiYBtnCLick(e:MouseEvent):void 
-		{
-			bg.textGoiY.txt.text = goiY;
-		}
-		
-		private function nextBtnCLick(e:MouseEvent):void 
-		{
-			var main:Main = this.parent as Main;
-			main.LoaderNextQuesttion();
-			
-		}
-		
-		private var trueAnswer:NotifyWin;
-		private function ketquabtnCLick(e:MouseEvent):void 
+		private function traloibtnCLick(e:MouseEvent):void 
 		{
 			if (bg.textNhap.txt.text == answer)
 			{
@@ -74,17 +69,50 @@ package
 					trueAnswer.x = 500 - trueAnswer.width / 2;
 					trueAnswer.y = 250;
 				}
+				trueAnswer.gotoAndStop(1);
 				trueAnswer.result_txt.text =  realAnswer;
 				trueAnswer.visible = true;
-				TweenLite.to(trueAnswer, 2, { visible:false } );
+				//TweenLite.to(trueAnswer, 2, { visible:false } );
 				
 				ketquabtn.visible = false;
+				traLoi.visible = false;
 				nextBtn.visible = true;
 			}
 			else
 			{
 				ShowError();
 			}
+		}
+		
+		private function goiYBtnCLick(e:MouseEvent):void 
+		{
+			bg.textGoiY.txt.text = goiY;
+		}
+		
+		private function nextBtnCLick(e:MouseEvent):void 
+		{
+			var main:Main = this.parent as Main;
+			main.LoaderNextQuesttion();
+			trueAnswer.visible = false;
+		}
+		
+		private var trueAnswer:NotifyWin;
+		private function ketquabtnCLick(e:MouseEvent):void 
+		{
+			if (trueAnswer == null) 
+			{
+				trueAnswer = new NotifyWin();
+				this.addChild(trueAnswer);
+				trueAnswer.x = 500 - trueAnswer.width / 2;
+				trueAnswer.y = 250;
+			}
+			trueAnswer.gotoAndStop(2);
+			trueAnswer.result_txt.text =  realAnswer;
+			trueAnswer.visible = true;
+			//TweenLite.to(trueAnswer, 2, { visible:false } );
+			traLoi.visible = false;
+			ketquabtn.visible = false;
+			nextBtn.visible = true;
 		}
 		private var endGame:NotifyEndGame;
 		public function LoadQuestion(obj:ResourceClass):void
@@ -102,10 +130,17 @@ package
 				TweenLite.to(endGame, 2, { visible:false } );
 				return;
 			}
+			
 			this.answer = obj._answer;
 			this.goiY = obj._goiY;
+			bg.textNhap.txt.text = "";
+			bg.textGoiY.txt.text = "";
+			
 			this.realAnswer = obj._realAnswer;
 			this.nextBtn.visible = false;
+			this.ketquabtn.visible = true;
+			this.traLoi.visible = true;
+			
 			while (container.numChildren > 0)
 			{
 				container.removeChildAt(0);
@@ -117,7 +152,9 @@ package
 			container.addChild(source);
 			
 			container.x = 500 - container.width / 2;
-			container.y = 100
+			container.y = 100;
+			container.addChildAt(new border(), 0);
+			
 		}
 		
 		private var error:NotifyRetry;
