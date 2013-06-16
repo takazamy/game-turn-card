@@ -2,6 +2,9 @@ package
 {
 	import flash.display.MovieClip;
 	import flash.events.Event;
+	import flash.events.MouseEvent;
+	import flash.text.TextField;
+	import flash.text.TextFormat;
 	
 	/**
 	 * ...
@@ -11,8 +14,17 @@ package
 	{
 		private var listData:Array = new Array();
 		private var selectedItem:TrucXanhItem;
+		private var doanChu_btn:Doan_chu_btn;
+		private var textNhap:TextField;
+		public var mainAnswer:String;
+		public var numAnswerComplete:int;
+		
 		public function TrucXanh_mc() 
 		{	
+			//this.graphics.beginFill(0x000000);
+			//this.graphics.drawRect(0, 0, 1000, 670);
+			//this.graphics.endFill();
+			
 			// random
 			var tempArray:Array = new Array();
 			for (var i:int = 1; i < 9; i++) 
@@ -37,13 +49,14 @@ package
 			for (var j:int = 0; j < listData.length; j++) 
 			{
 				item = new TrucXanhItem(MainScreen.getResource(listData[j]), listData[j]);
-				item.x = (j % 4) * 110;
-				item.y = int(j / 4) * 110;
+				item.x = (j % 4) * 109;
+				item.y = int(j / 4) * 109;
 				this.addChild(item);
 			}
 			
 			// event
 			this.addEventListener("Select", onSelect);
+			
 		}
 		
 		private function onSelect(e:Event):void 
@@ -53,8 +66,10 @@ package
 			{
 				// câu hỏi
 				var objParent:Main = parent as Main;
+				item.disapear();
 				objParent.startQuesttionGame();
 				objParent = null;
+				numAnswerComplete++;
 			}
 			else if (selectedItem == null) 
 			{
@@ -65,12 +80,38 @@ package
 				selectedItem.disapear();
 				item.disapear();
 				selectedItem = null;
+				numAnswerComplete += 2;
+				if (numAnswerComplete == 16) 
+				{
+					on_doanChu_btnClick(null);
+				}
 			} else  // chon sai
 			{
 				selectedItem.CoverCard();
 				item.CoverCard();
 				selectedItem = null;
 			}
+			
+		}
+		
+		private var mainQuestion:MovieClip;
+		public function loadResourceMainQuesttion():void
+		{
+			mainQuestion = new Question1 as MovieClip;
+			this.addChildAt(mainQuestion, 0);
+			mainAnswer = "coca";
+			
+			doanChu_btn = new Doan_chu_btn();
+			this.addChild(doanChu_btn);
+			doanChu_btn.x = 560;
+			doanChu_btn.y = 400;
+			doanChu_btn.addEventListener(MouseEvent.CLICK,on_doanChu_btnClick)
+		}
+		
+		private function on_doanChu_btnClick(e:MouseEvent):void 
+		{
+			var main:Main = this.parent as Main;
+			main.ShowDoanChu();
 		}
 		
 	}

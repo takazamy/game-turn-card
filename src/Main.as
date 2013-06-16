@@ -51,7 +51,7 @@ package
 			trucXanhScreen.x = 500 - trucXanhScreen.width / 2;
 			trucXanhScreen.y = 100;	
 			this.addChild(trucXanhScreen);
-			
+			trucXanhScreen.loadResourceMainQuesttion();
 			startBtn.visible = false;
 			mainScreen.visible = false;
 		}
@@ -123,7 +123,14 @@ package
 		private function next_btn_click(e:MouseEvent):void 
 		{
 			this.questionGame.visible = false;
-			this.trucXanhScreen.visible = true;
+			if (this.trucXanhScreen.numAnswerComplete < 16) 
+			{				
+				this.trucXanhScreen.visible = true;
+			}
+			else
+			{
+				ShowDoanChu();
+			}
 		}
 		
 		private var Loader:URLLoader;		
@@ -241,6 +248,39 @@ package
 				case 5:
 					questionGame.answer5.mask_mc.visible = true;
 					break;
+			}
+		}
+		
+		private var nhapChu:NhapChu_mc;
+		
+		public function ShowDoanChu():void
+		{
+			trucXanhScreen.visible = false;
+			if (nhapChu != null) 
+			{
+				this.removeChild(nhapChu);
+			}
+			nhapChu = new NhapChu_mc(trucXanhScreen.mainAnswer);
+			this.addChild(nhapChu);			
+		}
+		
+		private var notificationEndgame:NotifyEndGame;
+		
+		public function EndGame():void
+		{
+			notificationEndgame = new NotifyEndGame();
+			this.addChild(notificationEndgame);
+			notificationEndgame.x = 500 - notificationEndgame.width / 2;
+			notificationEndgame.y = 350;
+		}
+		
+		public function ContinueGame():void
+		{			
+			if (trucXanhScreen.numAnswerComplete < 16) 
+			{				
+				trucXanhScreen.visible = true;
+				nhapChu.visible = false;
+				nhapChu = null;
 			}
 		}
 	}
