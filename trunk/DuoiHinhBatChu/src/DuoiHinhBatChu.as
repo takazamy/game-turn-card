@@ -32,12 +32,12 @@ package
 			
 			ketquabtn = new Ket_Qua_btn()
 			ketquabtn.x = 870//500 - ketquabtn.width/2;
-			ketquabtn.y = 470 + 30;
+			ketquabtn.y = 398;
 			ketquabtn.addEventListener(MouseEvent.CLICK, ketquabtnCLick)
 			
 			traLoi = new Tra_loi();
 			traLoi.x = 870//500 - ketquabtn.width/2;
-			traLoi.y = 420 + 30;
+			traLoi.y = 470;
 			traLoi.addEventListener(MouseEvent.CLICK, traloibtnCLick)
 			this.addChild(traLoi);
 			
