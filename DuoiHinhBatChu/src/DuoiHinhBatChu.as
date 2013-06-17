@@ -7,6 +7,7 @@ package
 	import flash.media.SoundChannel;
 	import flash.sampler.NewObjectSample;
 	import flash.text.TextField;
+	import flash.utils.setTimeout;
 	/**
 	 * ...
 	 * @author Nguyễn Đoàn Phú
@@ -245,7 +246,13 @@ package
 				this.addChild(error);
 			}
 			error.alpha = 1;
-			TweenLite.to(error, 2, { alpha:0, visible:false} );
+			TweenLite.to(error, 2, { alpha:0} );
+			setTimeout(HideError,2000);
+		}
+		
+		private function HideError():void
+		{
+			error.visible = false;
 		}
 	}
 
