@@ -19,7 +19,9 @@ package
 		private var imageDict:Dictionary;
 		private var duoiHinhBatChuScreen:DuoiHinhBatChu;
 		private var soundChanel:SoundChannel;
-		private var sound:Sound = new BackgoundSong1();
+		private var sound:Sound = new BackgoundSong2();
+		private var mysoundTransform:SoundTransform;
+		
 		public function Main():void 
 		{
 			if (stage) init();
@@ -40,20 +42,18 @@ package
 			imageDict = new Dictionary();
 			loadResource();			
 			
-			// Âm Thanh
-			var mysoundTransform:SoundTransform = new SoundTransform();
-			mysoundTransform.volume = 0.5
-			
-			soundChanel = new SoundChannel();
-			soundChanel = sound.play();
-			soundChanel.soundTransform = mysoundTransform;
-			soundChanel.addEventListener(Event.SOUND_COMPLETE, onSoundComplelte);
+			// Âm Thanh		
+			soundChanel = new SoundChannel();			
+			soundChanel.addEventListener(Event.SOUND_COMPLETE, onSoundComplelte);	
+			mysoundTransform = new SoundTransform();			
+			mysoundTransform.volume = 0.15;				
 		}
 		
 		private function onSoundComplelte(e:Event):void 
 		{
-			// loop sound
-			soundChanel = sound.play();
+			// loop sound						
+			soundChanel = sound.play();					
+			soundChanel.soundTransform = mysoundTransform;
 		}
 		
 		private function onClick(e:Event):void 
@@ -66,7 +66,10 @@ package
 				//duoiHinhBatChuScreen.y = 100;	
 				this.addChild(duoiHinhBatChuScreen);
 				LoaderNextQuesttion();
-				//duoiHinhBatChuScreen.loadResourceMainQuesttion();
+				//duoiHinhBatChuScreen.loadResourceMainQuesttion();		
+				
+				soundChanel = sound.play();
+				soundChanel.soundTransform = mysoundTransform;
 				EndGame()
 			}
 			
@@ -137,6 +140,17 @@ package
 			resourceClass = null;
 			startBtn = null;
 			init();
+		}
+		
+		public function OnSound():void
+		{
+			soundChanel = sound.play();
+			soundChanel.soundTransform = mysoundTransform;
+		}
+		
+		public function OffSound():void
+		{
+			soundChanel.stop();
 		}
 	}
 	
