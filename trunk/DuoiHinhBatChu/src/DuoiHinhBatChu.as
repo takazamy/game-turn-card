@@ -4,6 +4,7 @@ package
 	import flash.display.MovieClip;
 	import flash.events.MouseEvent;
 	import flash.media.Sound;
+	import flash.media.SoundChannel;
 	import flash.sampler.NewObjectSample;
 	import flash.text.TextField;
 	/**
@@ -25,6 +26,10 @@ package
 		private var realAnswer:String = "";
 		private var textNhap:textNhap_mc;
 		private var textGoiY:textGioiY_mc;
+		private var musicOnOff:MusicOnOff;
+		private var soundOnOff:SoundOnOff;
+		private var soundChanel:SoundChannel;
+		
 		public function DuoiHinhBatChu():void
 		{
 			bg = new BG1();
@@ -66,8 +71,53 @@ package
 			goiYBtn.addEventListener(MouseEvent.CLICK, goiYBtnCLick);
 			this.addChild(goiYBtn);
 			
+			musicOnOff = new MusicOnOff();
+			this.addChild(musicOnOff);
+			musicOnOff.gotoAndStop(1);
+			musicOnOff.x = 960;			
+			musicOnOff.y = 3;			
+			musicOnOff.buttonMode = true;
+			musicOnOff.addEventListener(MouseEvent.CLICK, onTurnMusic);
+			
+			soundOnOff = new SoundOnOff();
+			this.addChild(soundOnOff);
+			soundOnOff.gotoAndStop(1);
+			soundOnOff.x = 964;			
+			soundOnOff.y = 36;			
+			soundOnOff.buttonMode = true;
+			soundOnOff.addEventListener(MouseEvent.CLICK, onTurnSound);
+			
 			container = new MovieClip();
 			this.addChild(container);
+			
+			soundChanel = new SoundChannel();			
+		}
+		
+		private function onTurnSound(e:MouseEvent):void 
+		{
+			if (soundOnOff.currentFrame == 1) 
+			{
+				soundOnOff.gotoAndStop(2);
+			}
+			else
+			{
+				soundOnOff.gotoAndStop(1);
+			}
+		}
+		
+		private function onTurnMusic(e:MouseEvent):void 
+		{			
+			var main:Main = this.parent as Main;
+			if (musicOnOff.currentFrame == 1) 
+			{
+				musicOnOff.gotoAndStop(2);
+				main.OffSound();
+			}
+			else
+			{
+				musicOnOff.gotoAndStop(1);
+				main.OnSound();
+			}
 		}
 		
 		private function traloibtnCLick(e:MouseEvent):void 
@@ -90,13 +140,19 @@ package
 				traLoi.visible = false;
 				nextBtn.visible = true;
 				
-				var sound1:Sound = new TrueAnswerSound();
-				sound1.play();
+				if (soundOnOff.currentFrame == 1) 
+				{
+					var sound1:Sound = new TrueAnswerSound();
+					soundChanel = sound1.play();;
+				}
 			}
 			else
 			{
-				var sound2:Sound = new WrongAnswerSound();
-				sound2.play();				
+				if (soundOnOff.currentFrame == 1) 
+				{					
+					var sound2:Sound = new WrongAnswerSound();
+					soundChanel = sound2.play();
+				}			
 				ShowError();
 			}
 		}
