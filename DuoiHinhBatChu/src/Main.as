@@ -3,6 +3,9 @@ package
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
+	import flash.media.Sound;
+	import flash.media.SoundChannel;
+	import flash.media.SoundTransform;
 	import flash.utils.Dictionary;
 	
 	/**
@@ -15,7 +18,8 @@ package
 		private var startBtn:Start_Btn;
 		private var imageDict:Dictionary;
 		private var duoiHinhBatChuScreen:DuoiHinhBatChu;
-		
+		private var soundChanel:SoundChannel;
+		private var sound:Sound = new BackgoundSong1();
 		public function Main():void 
 		{
 			if (stage) init();
@@ -34,7 +38,22 @@ package
 			this.addChild(startBtn);
 			startBtn.addEventListener(MouseEvent.CLICK, onClick);
 			imageDict = new Dictionary();
-			loadResource();
+			loadResource();			
+			
+			// Âm Thanh
+			var mysoundTransform:SoundTransform = new SoundTransform();
+			mysoundTransform.volume = 0.5
+			
+			soundChanel = new SoundChannel();
+			soundChanel = sound.play();
+			soundChanel.soundTransform = mysoundTransform;
+			soundChanel.addEventListener(Event.SOUND_COMPLETE, onSoundComplelte);
+		}
+		
+		private function onSoundComplelte(e:Event):void 
+		{
+			// loop sound
+			soundChanel = sound.play();
 		}
 		
 		private function onClick(e:Event):void 

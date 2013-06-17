@@ -3,6 +3,7 @@ package
 	import com.greensock.TweenLite;
 	import flash.display.MovieClip;
 	import flash.events.MouseEvent;
+	import flash.media.Sound;
 	import flash.sampler.NewObjectSample;
 	import flash.text.TextField;
 	/**
@@ -88,9 +89,14 @@ package
 				ketquabtn.visible = false;
 				traLoi.visible = false;
 				nextBtn.visible = true;
+				
+				var sound1:Sound = new TrueAnswerSound();
+				sound1.play();
 			}
 			else
 			{
+				var sound2:Sound = new WrongAnswerSound();
+				sound2.play();				
 				ShowError();
 			}
 		}
