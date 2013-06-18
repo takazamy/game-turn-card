@@ -34,49 +34,49 @@ package
 		public function DuoiHinhBatChu():void
 		{
 			bg = new BG1();
-			bg.alpha = 0.5;
+			bg.alpha = 1;
 			this.addChild(bg);
 			//bg.textNhap.visible = false;
 			//bg.textGoiY.visible = false;
 			textNhap = new textNhap_mc();
-			textNhap.x = 46;
-			textNhap.y = 143.5;
+			textNhap.x = 500 - 200;
+			textNhap.y = 440;
 			this.addChild(textNhap);
 			
 			textGoiY = new textGioiY_mc();
-			textGoiY.x = 127;
-			textGoiY.y = 286.4;
+			textGoiY.x = 223;
+			textGoiY.y = 250;
 			this.addChild(textGoiY);
 			
 			ketquabtn = new Ket_Qua_btn()
-			ketquabtn.x = 870//500 - ketquabtn.width/2;
-			ketquabtn.y = 398;
+			ketquabtn.x = 880//870//500 - ketquabtn.width/2;
+			ketquabtn.y = 405;
 			ketquabtn.addEventListener(MouseEvent.CLICK, ketquabtnCLick)
 			
 			traLoi = new Tra_loi();
-			traLoi.x = 870//500 - ketquabtn.width/2;
-			traLoi.y = 470;
+			traLoi.x = 730//870//500 - ketquabtn.width/2;
+			traLoi.y = 405;
 			traLoi.addEventListener(MouseEvent.CLICK, traloibtnCLick)
 			this.addChild(traLoi);
 			
 			nextBtn = new Next_btn();
-			nextBtn.x = 870;
-			nextBtn.y = 470;
+			nextBtn.x = 730//870;
+			nextBtn.y = 405;
 			nextBtn.addEventListener(MouseEvent.CLICK, nextBtnCLick);
 			this.addChild(ketquabtn);			
 			this.addChild(nextBtn);	
 			
 			goiYBtn = new Goi_y_btn();
-			goiYBtn.x = 870;
-			goiYBtn.y = 553;
+			goiYBtn.x = 730//870;
+			goiYBtn.y = 530;
 			goiYBtn.addEventListener(MouseEvent.CLICK, goiYBtnCLick);
 			this.addChild(goiYBtn);
 			
 			musicOnOff = new MusicOnOff();
 			this.addChild(musicOnOff);
-			musicOnOff.gotoAndStop(1);
+			musicOnOff.gotoAndStop(2);
 			musicOnOff.x = 960;			
-			musicOnOff.y = 3;			
+			musicOnOff.y = 103;			
 			musicOnOff.buttonMode = true;
 			musicOnOff.addEventListener(MouseEvent.CLICK, onTurnMusic);
 			
@@ -84,7 +84,7 @@ package
 			this.addChild(soundOnOff);
 			soundOnOff.gotoAndStop(1);
 			soundOnOff.x = 964;			
-			soundOnOff.y = 36;			
+			soundOnOff.y = 136;			
 			soundOnOff.buttonMode = true;
 			soundOnOff.addEventListener(MouseEvent.CLICK, onTurnSound);
 			
@@ -203,6 +203,8 @@ package
 				}
 				endGame.visible = true;
 				TweenLite.to(endGame, 2, { visible:false } );
+				var main:Main = this.parent as Main;
+				main.EndGame();
 				return;
 			}
 			
@@ -220,17 +222,19 @@ package
 			{
 				container.removeChildAt(0);
 			}
-			
+			container.addChild(new bgHinh());
 			var source:MovieClip = new obj._class as MovieClip;
-			source.width = 600;
-			source.height = 450;
+			source.width = 577;
+			source.height = 325;
+			source.x = 5;
+			source.y = 4.5;
 			//trace("con.width:"+container.width);
 			//container.width = source.width;
 			//container.height = source.height;
 			container.addChild(source);
 			//trace("con.width:"+container.width);
 			container.x = 500 - container.width / 2;
-			container.y = 10;
+			container.y = 100;
 			//container.addChildAt(new border(), 0);
 			
 		}
