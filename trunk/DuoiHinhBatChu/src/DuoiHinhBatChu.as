@@ -153,7 +153,8 @@ package
 				{					
 					var sound2:Sound = new WrongAnswerSound();
 					soundChanel = sound2.play();
-				}			
+				}		
+				textNhap.txt.text = "";
 				ShowError();
 			}
 		}
