@@ -246,6 +246,7 @@ package
 				this.addChild(error);
 			}
 			error.alpha = 1;
+			error.visible = true;
 			TweenLite.to(error, 2, { alpha:0} );
 			setTimeout(HideError,2000);
 		}
