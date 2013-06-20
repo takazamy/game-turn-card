@@ -68,8 +68,8 @@ package
 				LoaderNextQuesttion();
 				//duoiHinhBatChuScreen.loadResourceMainQuesttion();		
 				
-				//soundChanel = sound.play();
-				//soundChanel.soundTransform = mysoundTransform;				
+				soundChanel = sound.play();
+				soundChanel.soundTransform = mysoundTransform;				
 			}
 			
 			startBtn.visible = false;
@@ -112,7 +112,7 @@ package
 			resourceClass.push(new ResourceClass(img28, "Câu Giờ", "cau gio", "Đây là hành động cầu thủ đá banh rất hay làm ở cuối trận"));
 			
 			var defaultClass:Vector.<ResourceClass> = new Vector.<ResourceClass>;
-			defaultClass.push(new ResourceClass(imgdf1,"Zacs Phong Thủy","zacs phong thuy","Đây là một trong những sản phẩm của công ty NS Bluescope"));
+			defaultClass.push(new ResourceClass(imgdf1,"Zacs Màu Phong Thủy","zacs mau phong thuy","Đây là một trong những sản phẩm của công ty NS Bluescope"));
 			defaultClass.push(new ResourceClass(imgdf2,"Zacs Lạnh","zacs lanh","Đây là một trong những sản phẩm của công ty NS Bluescope"));
 			defaultClass.push(new ResourceClass(imgdf3, "Zacs Màu", "zacs mau", "Đây là một trong những sản phẩm của công ty NS Bluescope"));
 			

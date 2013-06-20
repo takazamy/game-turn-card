@@ -18,26 +18,27 @@ package
 			this.addChild(bg);
 		}
 		
-		public static function getResource(id:int):Class
-		{
-			switch(id)
-			{
-				case 1:
-					return Kim_mc;
-				case 2:
-					return Moc_mc;
-				case 3:
-					return Thuy_mc;
-				case 4:
-					return Hoa_mc;
-				case 5:
-					return Tho_mc;
-				case 6:
-					return BlueSS_mc;
-				default:
-					return Question_mc;
-			}
-		}
+		//public static function getResource(id:int):Class
+		//{
+			//switch(id)
+			//{
+				//case 1:
+					//return Kim_mc;
+				//case 2:
+					//return Moc_mc;
+				//case 3:
+					//return Thuy_mc;
+				//case 4:
+					//return Hoa_mc;
+				//case 5:
+					//return Tho_mc;
+				//case 6:
+					//return BlueSS_mc;
+				//default:
+					//return Question_mc;
+			//}
+			//
+		//}
 	}
 
 }
