@@ -73,15 +73,15 @@ package
 			this.addChild(goiYBtn);
 			
 			musicOnOff = new MusicOnOff();
-			//this.addChild(musicOnOff);
-			musicOnOff.gotoAndStop(2);
+			this.addChild(musicOnOff);
+			musicOnOff.gotoAndStop(1);
 			musicOnOff.x = 960;			
 			musicOnOff.y = 103;			
 			musicOnOff.buttonMode = true;
 			musicOnOff.addEventListener(MouseEvent.CLICK, onTurnMusic);
 			
 			soundOnOff = new SoundOnOff();
-			//this.addChild(soundOnOff);
+			this.addChild(soundOnOff);
 			soundOnOff.gotoAndStop(1);
 			soundOnOff.x = 964;			
 			soundOnOff.y = 136;			
@@ -153,7 +153,7 @@ package
 				if (soundOnOff.currentFrame == 1) 
 				{					
 					var sound2:MovieClip = new WrongAnswerSound();
-					sound2.gotoAndPlay(1);
+					sound2.gotoAndStop(1);
 					//soundChanel = sound2.play();
 				}		
 				textNhap.txt.text = "";
